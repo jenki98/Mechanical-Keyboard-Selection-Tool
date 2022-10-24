@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
+Mechanical Keyboard Selection Tool/[Ll]ibrary/
+Mechanical Keyboard Selection Tool/[Tt]emp/
+Mechanical Keyboard Selection Tool/[Oo]bj/
+Mechanical Keyboard Selection Tool/[Bb]uild/
+Mechanical Keyboard Selection Tool/[Bb]uilds/
+Mechanical Keyboard Selection Tool/[Ll]ogs/
+Mechanical Keyboard Selection Tool/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
