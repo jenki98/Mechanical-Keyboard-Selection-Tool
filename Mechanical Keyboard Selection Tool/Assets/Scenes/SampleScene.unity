@@ -2531,7 +2531,6 @@ GameObject:
   m_Component:
   - component: {fileID: 657877544}
   - component: {fileID: 657877547}
-  - component: {fileID: 657877546}
   - component: {fileID: 657877545}
   - component: {fileID: 657877548}
   m_Layer: 5
@@ -2587,18 +2586,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!225 &657877546
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657877543}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!223 &657877547
 Canvas:
   m_ObjectHideFlags: 0
@@ -2635,7 +2622,7 @@ MonoBehaviour:
   colours:
   - colourName: Black
     colour:
-      m_NormalColor: {r: 0.14346743, g: 0.23241541, b: 0.9811321, a: 0}
+      m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
       m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
       m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
       m_SelectedColor: {r: 0, g: 0, b: 0, a: 0}
@@ -2645,7 +2632,7 @@ MonoBehaviour:
     price: 0
   - colourName: White
     colour:
-      m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+      m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
       m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
       m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
       m_SelectedColor: {r: 0, g: 0, b: 0, a: 0}
@@ -2655,7 +2642,7 @@ MonoBehaviour:
     price: 0
   - colourName: Grey
     colour:
-      m_NormalColor: {r: 0.8490566, g: 0.23629406, b: 0.5538819, a: 0}
+      m_NormalColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
       m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
       m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
       m_SelectedColor: {r: 0, g: 0, b: 0, a: 0}
@@ -2665,7 +2652,7 @@ MonoBehaviour:
     price: 0
   - colourName: Burgundy
     colour:
-      m_NormalColor: {r: 0.254717, g: 0.015619445, b: 0.015619445, a: 0}
+      m_NormalColor: {r: 0.254717, g: 0.015619445, b: 0.015619445, a: 1}
       m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
       m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
       m_SelectedColor: {r: 0, g: 0, b: 0, a: 0}
@@ -3078,6 +3065,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 734495354}
+  - component: {fileID: 734495356}
+  - component: {fileID: 734495355}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -3107,6 +3096,26 @@ RectTransform:
   m_AnchoredPosition: {x: -1.9734955, y: 0.25}
   m_SizeDelta: {x: 3.9472, y: 0.50003}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &734495355
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734495353}
+  m_CullTransparentMesh: 1
+--- !u!225 &734495356
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734495353}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &735701068
 GameObject:
   m_ObjectHideFlags: 0
@@ -3357,6 +3366,8 @@ GameObject:
   m_Component:
   - component: {fileID: 818267284}
   - component: {fileID: 818267287}
+  - component: {fileID: 818267289}
+  - component: {fileID: 818267288}
   m_Layer: 5
   m_Name: Keycaps
   m_TagString: Untagged
@@ -3411,6 +3422,39 @@ MonoBehaviour:
     price: 0
   dropDown: {fileID: 1150766577}
   description: {fileID: 2097806059}
+--- !u!225 &818267288
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818267283}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!223 &818267289
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818267283}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &868933743
 GameObject:
   m_ObjectHideFlags: 3
@@ -3932,6 +3976,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1128311260}
   - component: {fileID: 1128311261}
+  - component: {fileID: 1128311263}
+  - component: {fileID: 1128311262}
   m_Layer: 5
   m_Name: Switches
   m_TagString: Untagged
@@ -3986,6 +4032,39 @@ MonoBehaviour:
     price: 0
   dropDown: {fileID: 1484872847}
   description: {fileID: 1968841}
+--- !u!225 &1128311262
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128311259}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!223 &1128311263
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128311259}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1150766575
 GameObject:
   m_ObjectHideFlags: 0
@@ -6585,6 +6664,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2021537289}
+  - component: {fileID: 2021537291}
+  - component: {fileID: 2021537290}
   m_Layer: 5
   m_Name: CameraView
   m_TagString: Untagged
@@ -6614,6 +6695,26 @@ RectTransform:
   m_AnchoredPosition: {x: -2.6692047, y: -1}
   m_SizeDelta: {x: -4.3954, y: -2.8771}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2021537290
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021537288}
+  m_CullTransparentMesh: 1
+--- !u!225 &2021537291
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021537288}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2062074378
 GameObject:
   m_ObjectHideFlags: 3
