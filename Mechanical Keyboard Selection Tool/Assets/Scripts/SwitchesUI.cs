@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SwitchUIController : MonoBehaviour
+public class SwitchesUI : MonoBehaviour
 {
 
 
@@ -13,6 +13,9 @@ public class SwitchUIController : MonoBehaviour
     [SerializeField] private Dropdown dropDown;
     [SerializeField] private TextMeshProUGUI description;
 
+    List<string> switchNames = new List<string>();
+
+
     string txt;
     int dropDownValue;
 
@@ -20,10 +23,20 @@ public class SwitchUIController : MonoBehaviour
     {
         description = GetComponentInChildren<TextMeshProUGUI>();
         dropDown = GetComponentInChildren<Dropdown>();
+        dropDown.ClearOptions();
+        PopulateDropdown();
+
+      
     }
 
     // Update is called once per frame
     void Update()
+    {
+        UpdateDescription();
+
+    }
+
+    void UpdateDescription()
     {
         dropDownValue = dropDown.value;
         txt = dropDown.options[dropDownValue].text;
@@ -35,6 +48,14 @@ public class SwitchUIController : MonoBehaviour
                 description.text = switches.description;
             }
         }
+    }
 
+    void PopulateDropdown()
+    {
+        foreach (Switches switches in switchList)
+        {
+            switchNames.Add(switches.name);
+        }
+        dropDown.AddOptions(switchNames);
     }
 }

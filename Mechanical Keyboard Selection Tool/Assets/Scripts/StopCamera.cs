@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class StopCamera : MonoBehaviour
 {
    [SerializeField] private GameObject cm;
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
