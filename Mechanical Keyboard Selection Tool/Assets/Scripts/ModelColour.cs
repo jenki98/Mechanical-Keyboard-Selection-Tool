@@ -8,6 +8,6 @@ public struct ModelColour
 {
     public string colourName;
     public ColorBlock colour;
-    public int price;
+    public float price;
 }
   

@@ -6,10 +6,9 @@ using UnityEngine.UI;
 
 public class SwitchesUI : MonoBehaviour
 {
-
+    [SerializeField] private Keyboard keyboard;
 
     TextMeshProUGUI descriptionTxt;
-    [SerializeField] private List<Switches> switchList = new List<Switches>();
     [SerializeField] private Dropdown dropDown;
     [SerializeField] private TextMeshProUGUI description;
 
@@ -41,7 +40,7 @@ public class SwitchesUI : MonoBehaviour
         dropDownValue = dropDown.value;
         txt = dropDown.options[dropDownValue].text;
 
-        foreach (Switches switches in switchList)
+        foreach (Switches switches in keyboard.GetSwitches())
         {
             if (txt.Equals(switches.name))
             {
@@ -52,7 +51,7 @@ public class SwitchesUI : MonoBehaviour
 
     void PopulateDropdown()
     {
-        foreach (Switches switches in switchList)
+        foreach (Switches switches in keyboard.GetSwitches())
         {
             switchNames.Add(switches.name);
         }

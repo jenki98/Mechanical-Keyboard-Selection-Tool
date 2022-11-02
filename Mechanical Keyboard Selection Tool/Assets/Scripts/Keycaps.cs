@@ -7,7 +7,7 @@ public struct Keycaps
 {
     public string name;
     public string description;
-    public int price;
+    public float price;
 }
 
 

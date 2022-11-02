@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ModelColourUI : MonoBehaviour
 {
-    [SerializeField] private List<ModelColour> colours = new List<ModelColour>();
+    [SerializeField] private Keyboard keyboard;
 
     [SerializeField] private GameObject templatePrefab;
     [SerializeField] private Transform templateParent;
@@ -13,6 +13,7 @@ public class ModelColourUI : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
+       
         AddColours();
     }
     void Update()
@@ -22,7 +23,7 @@ public class ModelColourUI : MonoBehaviour
 
     void AddColours()
     {
-        foreach (var colour in colours)
+        foreach (var colour in keyboard.GetModelColours())
         {
            GameObject newTemp = Instantiate(templatePrefab, templateParent);
            Button btn = newTemp.GetComponentInChildren<Button>();

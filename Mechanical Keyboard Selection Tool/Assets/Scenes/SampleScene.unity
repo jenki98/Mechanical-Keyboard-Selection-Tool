@@ -1429,7 +1429,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474629546}
-  m_LocalRotation: {x: 0.31621876, y: 0.0071488153, z: -0.0023829383, w: 0.9486564}
+  m_LocalRotation: {x: 0.28977594, y: 0.0072122617, z: -0.0021836974, w: 0.95706487}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1724,7 +1724,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Holy Pandas
+  m_Text: 
 --- !u!222 &501183586
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1843,12 +1843,12 @@ MonoBehaviour:
   m_BindingMode: 5
   m_SplineCurvature: 0.2
   m_Orbits:
-  - m_Height: 6
-    m_Radius: 2
   - m_Height: 3
-    m_Radius: 4
+    m_Radius: 1
+  - m_Height: 2
+    m_Radius: 3
   - m_Height: 0
-    m_Radius: 2
+    m_Radius: 1
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
   - {fileID: 474629547}
@@ -1862,7 +1862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515243937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.95190156, y: 3.142, z: -3.2665248}
+  m_LocalPosition: {x: -0.9368311, y: 2.142, z: -2.2666383}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2530,7 +2530,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 657877544}
-  - component: {fileID: 657877547}
   - component: {fileID: 657877545}
   - component: {fileID: 657877548}
   m_Layer: 5
@@ -2586,27 +2585,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!223 &657877547
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657877543}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!114 &657877548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2619,47 +2597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f5f3451b5df584890e1c5461de561e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colours:
-  - colourName: Black
-    colour:
-      m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
-      m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_SelectedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
-      m_ColorMultiplier: 0
-      m_FadeDuration: 0
-    price: 0
-  - colourName: White
-    colour:
-      m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-      m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_SelectedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
-      m_ColorMultiplier: 0
-      m_FadeDuration: 0
-    price: 0
-  - colourName: Grey
-    colour:
-      m_NormalColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
-      m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_SelectedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
-      m_ColorMultiplier: 0
-      m_FadeDuration: 0
-    price: 0
-  - colourName: Burgundy
-    colour:
-      m_NormalColor: {r: 0.254717, g: 0.015619445, b: 0.015619445, a: 1}
-      m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_SelectedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
-      m_ColorMultiplier: 0
-      m_FadeDuration: 0
-    price: 0
+  keyboard: {fileID: 11400000, guid: dc840ca17d66f28428f6fd6faedb53b2, type: 2}
   templatePrefab: {fileID: 4911628995027579646, guid: 95ed3c664cf1b3c4f913004f7c93f383,
     type: 3}
   templateParent: {fileID: 657877544}
@@ -3065,8 +3003,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 734495354}
-  - component: {fileID: 734495356}
-  - component: {fileID: 734495355}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -3096,26 +3032,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1.9734955, y: 0.25}
   m_SizeDelta: {x: 3.9472, y: 0.50003}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &734495355
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734495353}
-  m_CullTransparentMesh: 1
---- !u!225 &734495356
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734495353}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &735701068
 GameObject:
   m_ObjectHideFlags: 0
@@ -3366,8 +3282,6 @@ GameObject:
   m_Component:
   - component: {fileID: 818267284}
   - component: {fileID: 818267287}
-  - component: {fileID: 818267289}
-  - component: {fileID: 818267288}
   m_Layer: 5
   m_Name: Keycaps
   m_TagString: Untagged
@@ -3410,51 +3324,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff763d9a52b024daad6796228fef7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keycaps:
-  - name: GMK White
-    description: White keycaps with Black Text
-    price: 0
-  - name: Blue
-    description: Blue keycaps
-    price: 0
-  - name: Purple
-    description: Purple Keycaps
-    price: 0
+  keyboard: {fileID: 11400000, guid: dc840ca17d66f28428f6fd6faedb53b2, type: 2}
   dropDown: {fileID: 1150766577}
   description: {fileID: 2097806059}
---- !u!225 &818267288
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 818267283}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
---- !u!223 &818267289
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 818267283}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!1 &868933743
 GameObject:
   m_ObjectHideFlags: 3
@@ -3529,7 +3401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 3, z: -4}
+  m_FollowOffset: {x: 0, y: 2, z: -3}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -3653,7 +3525,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: GMK White
+  m_Text: 
 --- !u!222 &937500585
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3740,8 +3612,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.29891086, y: 0.0071910243, z: -0.0022525252, w: 0.9542513}
-  m_LocalPosition: {x: -0.95190156, y: 3.142, z: -3.2665248}
+  m_LocalRotation: {x: 0.2723194, y: 0.0072507723, z: -0.0020521423, w: 0.9621774}
+  m_LocalPosition: {x: -0.9368311, y: 2.142, z: -2.2666383}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3976,8 +3848,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1128311260}
   - component: {fileID: 1128311261}
-  - component: {fileID: 1128311263}
-  - component: {fileID: 1128311262}
   m_Layer: 5
   m_Name: Switches
   m_TagString: Untagged
@@ -4020,51 +3890,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9964d40b21743f4c9d69092f7b6e2db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchList:
-  - name: Holy Pandas
-    description: Tactile
-    price: 0
-  - name: Alpacas
-    description: 62g
-    price: 0
-  - name: BananaSplits
-    description: 63g
-    price: 0
+  keyboard: {fileID: 11400000, guid: dc840ca17d66f28428f6fd6faedb53b2, type: 2}
   dropDown: {fileID: 1484872847}
   description: {fileID: 1968841}
---- !u!225 &1128311262
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128311259}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
---- !u!223 &1128311263
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128311259}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!1 &1150766575
 GameObject:
   m_ObjectHideFlags: 0
@@ -4155,9 +3983,7 @@ MonoBehaviour:
   m_ItemImage: {fileID: 0}
   m_Value: 0
   m_Options:
-    m_Options:
-    - m_Text: GMK White
-      m_Image: {fileID: 0}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4764,7 +4590,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331192912}
-  m_LocalRotation: {x: 0.2989109, y: 0.0071910243, z: -0.0022525254, w: 0.9542513}
+  m_LocalRotation: {x: 0.27231947, y: 0.007250773, z: -0.0020521437, w: 0.9621774}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5131,7 +4957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 3, z: -4}
+  m_FollowOffset: {x: 0, y: 2, z: -3}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -5401,9 +5227,7 @@ MonoBehaviour:
   m_ItemImage: {fileID: 0}
   m_Value: 0
   m_Options:
-    m_Options:
-    - m_Text: Holy Pandas
-      m_Image: {fileID: 0}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5619,7 +5443,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552687600}
-  m_LocalRotation: {x: 0.2815502, y: 0.007230671, z: -0.0021216895, w: 0.95951694}
+  m_LocalRotation: {x: 0.25481933, y: 0.0072867917, z: -0.001920262, w: 0.96695936}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6664,8 +6488,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2021537289}
-  - component: {fileID: 2021537291}
-  - component: {fileID: 2021537290}
   m_Layer: 5
   m_Name: CameraView
   m_TagString: Untagged
@@ -6695,26 +6517,6 @@ RectTransform:
   m_AnchoredPosition: {x: -2.6692047, y: -1}
   m_SizeDelta: {x: -4.3954, y: -2.8771}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &2021537290
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021537288}
-  m_CullTransparentMesh: 1
---- !u!225 &2021537291
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021537288}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &2062074378
 GameObject:
   m_ObjectHideFlags: 3
@@ -6789,7 +6591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 3, z: -4}
+  m_FollowOffset: {x: 0, y: 2, z: -3}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
