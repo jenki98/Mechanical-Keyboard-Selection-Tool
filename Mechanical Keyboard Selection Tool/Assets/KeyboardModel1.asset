@@ -14,44 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colours:
   - colourName: Black
-    colour:
-      m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
-      m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_SelectedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
-      m_ColorMultiplier: 0
-      m_FadeDuration: 0
+    colour: {r: 0, g: 0, b: 0, a: 1}
     price: 0
   - colourName: Grey
-    colour:
-      m_NormalColor: {r: 0.1981132, g: 0.1971787, b: 0.1971787, a: 1}
-      m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_SelectedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
-      m_ColorMultiplier: 0
-      m_FadeDuration: 0
+    colour: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
     price: 0
   - colourName: White
-    colour:
-      m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-      m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_SelectedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
-      m_ColorMultiplier: 0
-      m_FadeDuration: 0
+    colour: {r: 1, g: 1, b: 1, a: 1}
     price: 20
   - colourName: Burgundy
-    colour:
-      m_NormalColor: {r: 0.18867922, g: 0.063189745, b: 0.063189745, a: 1}
-      m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_SelectedColor: {r: 0, g: 0, b: 0, a: 0}
-      m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
-      m_ColorMultiplier: 0
-      m_FadeDuration: 0
+    colour: {r: 0.24528301, g: 0, b: 0, a: 1}
     price: 20
   switches:
   - name: Holy Pandas

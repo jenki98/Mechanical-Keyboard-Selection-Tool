@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class ModelColourUIController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private KeyboardSelection keyboardStruct;
+    [SerializeField] private Material boardMaterial;
+    //change keycap colour
+    //update keyboard selection
+
+    public void ChangeModelColour(ModelColour modelColour)
     {
-        
+        boardMaterial.color = modelColour.colour;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateModelColourSelection(ModelColour modelColour)
     {
-        
+        keyboardStruct.modelColour = modelColour;
     }
 }

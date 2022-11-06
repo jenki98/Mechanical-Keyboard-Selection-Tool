@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public struct ModelColour
 {
     public string colourName;
-    public ColorBlock colour;
+    public Color colour;
     public float price;
 }
   
