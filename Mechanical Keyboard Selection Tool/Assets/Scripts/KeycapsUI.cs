@@ -7,9 +7,11 @@ using UnityEngine.UI;
 public class KeycapsUI : MonoBehaviour
 {
     // Start is called before the first frame update
+    private KeycapsUIController uIController;
     [SerializeField] private Keyboard keyboard;
     [SerializeField] private Dropdown dropDown;
     [SerializeField] private TextMeshProUGUI description;
+
 
     string txt;
     int dropDownValue;
@@ -17,6 +19,7 @@ public class KeycapsUI : MonoBehaviour
 
     void Start()
     {
+        uIController = GetComponent<KeycapsUIController>();
         description = GetComponentInChildren<TextMeshProUGUI>();
         dropDown = GetComponentInChildren<Dropdown>();
 
@@ -26,9 +29,11 @@ public class KeycapsUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateDescription();
+        UpdateSelection();
     }
-    void UpdateDescription()
+
+   
+    void UpdateSelection()
     {
         dropDownValue = dropDown.value;
         txt = dropDown.options[dropDownValue].text;
@@ -38,8 +43,12 @@ public class KeycapsUI : MonoBehaviour
             if (txt.Equals(keycaps.name))
             {
                 description.text = keycaps.description;
+                uIController.UpdateKeycapSelection(keycaps);
+                uIController.ChangeKeycap(keycaps);
             }
         }
+
+        
     }
 
     void PopulateDropdown()

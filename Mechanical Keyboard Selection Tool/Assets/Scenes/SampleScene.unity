@@ -1429,7 +1429,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474629546}
-  m_LocalRotation: {x: 0.28977594, y: 0.0072122617, z: -0.0021836974, w: 0.95706487}
+  m_LocalRotation: {x: 0.28977594, y: 0.0072122286, z: -0.0021836876, w: 0.95706487}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3282,6 +3282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 818267284}
   - component: {fileID: 818267287}
+  - component: {fileID: 818267288}
   m_Layer: 5
   m_Name: Keycaps
   m_TagString: Untagged
@@ -3327,6 +3328,19 @@ MonoBehaviour:
   keyboard: {fileID: 11400000, guid: dc840ca17d66f28428f6fd6faedb53b2, type: 2}
   dropDown: {fileID: 1150766577}
   description: {fileID: 2097806059}
+--- !u!114 &818267288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818267283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baa8a80cf7ae6346bfe67d1ea85c7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keycapMaterial: {fileID: 2100000, guid: 52ae817273ac27d429554e89e7639941, type: 2}
 --- !u!1 &868933743
 GameObject:
   m_ObjectHideFlags: 3
@@ -5443,7 +5457,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552687600}
-  m_LocalRotation: {x: 0.25481933, y: 0.0072867917, z: -0.001920262, w: 0.96695936}
+  m_LocalRotation: {x: 0.25481933, y: 0.0072868248, z: -0.0019202708, w: 0.96695936}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

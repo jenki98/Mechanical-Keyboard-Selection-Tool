@@ -7,6 +7,7 @@ public struct Keycaps
 {
     public string name;
     public string description;
+    public Color color;
     public float price;
 }
 

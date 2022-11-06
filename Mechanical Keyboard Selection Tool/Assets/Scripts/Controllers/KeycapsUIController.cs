@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class KeycapsUIController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private KeyboardSelection keyboardStruct;
+   [SerializeField]private Material keycapMaterial;
+    //change keycap colour
+    //update keyboard selection
+
+    public void ChangeKeycap(Keycaps keycap)
     {
-        
+        keycapMaterial.color = keycap.color;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateKeycapSelection(Keycaps keycap)
     {
-        
+        keyboardStruct.keycap = keycap;
     }
 }

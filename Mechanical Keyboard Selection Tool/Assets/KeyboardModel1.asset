@@ -66,11 +66,14 @@ MonoBehaviour:
   keycaps:
   - name: WoB
     description: Black text on White keycaps
+    color: {r: 1, g: 1, b: 1, a: 0}
     price: 0
   - name: Light blue
     description: Light blue keycaps with black text
+    color: {r: 0.6399964, g: 0.87363994, b: 0.8867924, a: 0}
     price: 40
   - name: Lavender
     description: 'Lavender keycaps with '
+    color: {r: 0.75982153, g: 0.53844786, b: 0.9433962, a: 0}
     price: 60
   basePrice: 100
