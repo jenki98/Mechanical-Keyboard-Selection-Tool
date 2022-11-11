@@ -7,8 +7,7 @@ using UnityEngine.UI;
 public class KeycapsUI : MonoBehaviour
 {
     // Start is called before the first frame update
-    private KeycapsUIController uIController;
-    [SerializeField] private Keyboard keyboard;
+    private KeycapsUIController UIController;
     [SerializeField] private Dropdown dropDown;
     [SerializeField] private TextMeshProUGUI description;
 
@@ -19,7 +18,7 @@ public class KeycapsUI : MonoBehaviour
 
     void Start()
     {
-        uIController = GetComponent<KeycapsUIController>();
+        UIController = GetComponent<KeycapsUIController>();
         description = GetComponentInChildren<TextMeshProUGUI>();
         dropDown = GetComponentInChildren<Dropdown>();
 
@@ -30,6 +29,7 @@ public class KeycapsUI : MonoBehaviour
     void Update()
     {
         UpdateSelection();
+        
     }
 
    
@@ -38,13 +38,16 @@ public class KeycapsUI : MonoBehaviour
         dropDownValue = dropDown.value;
         txt = dropDown.options[dropDownValue].text;
 
-        foreach (Keycaps keycaps in keyboard.GetKeycaps())
+        foreach (Keycaps keycaps in KeyboardManager.Instance.GetKeycaps())
         {
             if (txt.Equals(keycaps.name))
             {
+                
+
                 description.text = keycaps.description;
-                uIController.UpdateKeycapSelection(keycaps);
-                uIController.ChangeKeycap(keycaps);
+                UIController.UpdateKeycapSelection(keycaps);
+                UIController.ChangeKeycap(keycaps);
+              
             }
         }
 
@@ -53,10 +56,9 @@ public class KeycapsUI : MonoBehaviour
 
     void PopulateDropdown()
     {
-        foreach (Keycaps keycaps in keyboard.GetKeycaps())
+        foreach (Keycaps keycaps in KeyboardManager.Instance.GetKeycaps())
         {
             keycapNames.Add(keycaps.name);
-            Debug.Log(keycaps.name);
         }
         dropDown.AddOptions(keycapNames);
     }

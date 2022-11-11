@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class ModelColourUI : MonoBehaviour
 {
-    [SerializeField] private Keyboard keyboard;
-    private ModelColourUIController uIController;
+    private ModelColourUIController UIController;
 
     [SerializeField] private GameObject templatePrefab;
     [SerializeField] private Transform templateParent;
@@ -15,14 +14,14 @@ public class ModelColourUI : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
-        uIController = GetComponent<ModelColourUIController>();
+        UIController = GetComponent<ModelColourUIController>();
         AddColours();
     }
    
 
     void AddColours()
     {
-        foreach (var colour in keyboard.GetModelColours())
+        foreach (var colour in KeyboardManager.Instance.GetModelColours())
         {
             GameObject newButton = Instantiate(templatePrefab, templateParent);
             Button btn = newButton.GetComponentInChildren<Button>();
@@ -40,13 +39,13 @@ public class ModelColourUI : MonoBehaviour
 
    public void UpdateSelection(GameObject colourButton)
     {
-        foreach(ModelColour modelColour in keyboard.GetModelColours())
+        foreach(ModelColour modelColour in KeyboardManager.Instance.GetModelColours())
         {
             Button btn = colourButton.GetComponent<Button>();
             if(btn.colors.normalColor == modelColour.colour)
             {
-                uIController.ChangeModelColour(modelColour);
-                uIController.UpdateModelColourSelection(modelColour);
+                UIController.ChangeModelColour(modelColour);
+                UIController.UpdateModelColourSelection(modelColour);
             }
 
         }

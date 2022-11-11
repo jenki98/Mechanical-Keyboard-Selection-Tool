@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class KeycapsUIController : MonoBehaviour
 {
-    private KeyboardSelection keyboardStruct;
    [SerializeField]private Material keycapMaterial;
     //change keycap colour
     //update keyboard selection
@@ -16,6 +15,8 @@ public class KeycapsUIController : MonoBehaviour
 
     public void UpdateKeycapSelection(Keycaps keycap)
     {
-        keyboardStruct.keycap = keycap;
+
+        KeyboardManager.Instance.SelectedKeycap(keycap);
+      
     }
 }

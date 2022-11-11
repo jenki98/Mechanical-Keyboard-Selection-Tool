@@ -18,10 +18,10 @@ MonoBehaviour:
     price: 0
   - colourName: Grey
     colour: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
-    price: 0
+    price: 10
   - colourName: White
     colour: {r: 1, g: 1, b: 1, a: 1}
-    price: 20
+    price: 30
   - colourName: Burgundy
     colour: {r: 0.24528301, g: 0, b: 0, a: 1}
     price: 20

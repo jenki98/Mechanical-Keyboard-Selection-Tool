@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class SwitchesUIController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private KeyboardSelection keyboardStruct;
+    [SerializeField] private Material switchesMaterial;
+    //change keycap colour
+    //update keyboard selection
+
+    public void ChangeSwitches(Switches switches)
     {
-        
+        //switchesMaterial.color = switches.color;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateSwitchesSelection(Switches switches)
     {
-        
+        KeyboardManager.Instance.SelectedSwitch(switches);
+
     }
 }
+
