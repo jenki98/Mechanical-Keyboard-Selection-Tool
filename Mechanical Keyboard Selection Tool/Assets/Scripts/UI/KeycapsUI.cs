@@ -42,12 +42,13 @@ public class KeycapsUI : MonoBehaviour
         {
             if (txt.Equals(keycaps.name))
             {
-                
 
+                
                 description.text = keycaps.description;
                 UIController.UpdateKeycapSelection(keycaps);
                 UIController.ChangeKeycap(keycaps);
               
+
             }
         }
 

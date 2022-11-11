@@ -14,15 +14,11 @@ public class PriceUpdateUI : MonoBehaviour
     void Start()
     {
         priceTxt = GetComponent<TextMeshProUGUI>();
-        //EventManager.OnSelectedEvent += GetUpdatedPrice;
-        //subscribe to price update event (list of key value pairs description and pairs, list of tmp )
+        EventManager.current.onSelectionUpdate += GetUpdatedPrice;
     }
 
-    void Update()
-    {
-        GetUpdatedPrice();
-    }
-    public void GetUpdatedPrice()
+    
+    private void GetUpdatedPrice()
     {
         keyboard = KeyboardManager.Instance.GetKeyboardSelection();
         price = keyboard.basePrice + keyboard.Keycaps.price + keyboard.Switches.price + keyboard.ModelColour.price;

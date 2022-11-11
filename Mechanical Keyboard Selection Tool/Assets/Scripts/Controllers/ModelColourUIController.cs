@@ -17,5 +17,7 @@ public class ModelColourUIController : MonoBehaviour
     public void UpdateModelColourSelection(ModelColour modelColour)
     {
         KeyboardManager.Instance.SelectedColour(modelColour);
+        EventManager.current.SelectionUpdate();
+
     }
 }

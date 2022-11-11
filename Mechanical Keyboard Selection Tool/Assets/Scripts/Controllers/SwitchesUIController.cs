@@ -17,6 +17,8 @@ public class SwitchesUIController : MonoBehaviour
     public void UpdateSwitchesSelection(Switches switches)
     {
         KeyboardManager.Instance.SelectedSwitch(switches);
+        EventManager.current.SelectionUpdate();
+
 
     }
 }
