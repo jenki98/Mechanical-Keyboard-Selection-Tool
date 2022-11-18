@@ -11,33 +11,23 @@ public class SwitchesUI : MonoBehaviour
 
     List<string> switchNames = new List<string>();
 
-    private SwitchesUIController UIController;
+    [SerializeField] private SwitchesUIController UIController;
 
     string txt;
-    int dropDownValue;
 
     void Start()
     {
-        UIController = GetComponent<SwitchesUIController>();
-        description = GetComponentInChildren<TextMeshProUGUI>();
-        dropDown = GetComponentInChildren<Dropdown>();
-        dropDown.ClearOptions();
-        PopulateDropdown();
+        EventManager.current.onModelSelect += PopulateDropdown;
+        dropDown.onValueChanged.AddListener((dropDownValue) => UpdateSelection(dropDownValue));
 
-      
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        UpdateSelection();
 
     }
 
-    void UpdateSelection()
+    void UpdateSelection(int i)
     {
-        dropDownValue = dropDown.value;
-        txt = dropDown.options[dropDownValue].text;
+
+        txt = dropDown.options[i].text;
 
         foreach (Switches switches in KeyboardManager.Instance.GetSwitches())
         {
@@ -52,6 +42,8 @@ public class SwitchesUI : MonoBehaviour
 
     void PopulateDropdown()
     {
+        switchNames.Clear();
+        dropDown.ClearOptions();
         foreach (Switches switches in KeyboardManager.Instance.GetSwitches())
         {
             switchNames.Add(switches.name);

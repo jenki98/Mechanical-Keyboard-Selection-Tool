@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Keyboard", menuName = "Keyboards")]
 public class Keyboard : ScriptableObject
 {
+    [SerializeField] public string modelName;
     [SerializeField] public List<ModelColour> colours = new List<ModelColour>();
     [SerializeField] public List<Switches> switches = new List<Switches>();
     [SerializeField] public List<Keycaps> keycaps = new List<Keycaps>();

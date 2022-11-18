@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+[RequireComponent(typeof(ModelColourUIController))]
 public class ModelColourUI : MonoBehaviour
 {
-    private ModelColourUIController UIController;
+    [SerializeField] private ModelColourUIController UIController;
 
     [SerializeField] private GameObject templatePrefab;
     [SerializeField] private Transform templateParent;
@@ -14,30 +14,38 @@ public class ModelColourUI : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
-        UIController = GetComponent<ModelColourUIController>();
-        AddColours();
+        //EventManager.current.onModelSelect += AddColours;
+
+        AddColours(); // observer
     }
    
 
     void AddColours()
     {
-        foreach (var colour in KeyboardManager.Instance.GetModelColours())
+        foreach (ModelColour modelColour in KeyboardManager.Instance.GetModelColours())
         {
+            
             GameObject newButton = Instantiate(templatePrefab, templateParent);
             Button btn = newButton.GetComponentInChildren<Button>();
             btn.onClick.AddListener(() => { UpdateSelection(newButton); });
- 
-            var btnColor = btn.colors;
-            Color c = colour.colour;
-            btnColor.normalColor = c;
-            c.a = 0.5f;
-            btnColor.highlightedColor = c;
-            btnColor.selectedColor = c;
-            btn.colors = btnColor;
+
+            ChangeButtonColour(btn, modelColour);
+           
         }
     }
 
-   public void UpdateSelection(GameObject colourButton)
+
+    void ChangeButtonColour(Button btn, ModelColour modelColour )
+    {
+        var btnColor = btn.colors;
+        Color colour = modelColour.colour;
+        btnColor.normalColor = colour;
+        colour.a = 0.5f;
+        btnColor.highlightedColor = colour;
+        btnColor.selectedColor = colour;
+        btn.colors = btnColor;
+    }
+   void UpdateSelection(GameObject colourButton)
     {
         foreach(ModelColour modelColour in KeyboardManager.Instance.GetModelColours())
         {
@@ -51,5 +59,7 @@ public class ModelColourUI : MonoBehaviour
         }
 
     }
+
+
 
 }

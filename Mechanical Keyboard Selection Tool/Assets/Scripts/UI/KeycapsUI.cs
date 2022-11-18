@@ -7,36 +7,29 @@ using UnityEngine.UI;
 public class KeycapsUI : MonoBehaviour
 {
     // Start is called before the first frame update
-    private KeycapsUIController UIController;
+    [SerializeField] private KeycapsUIController UIController;
     [SerializeField] private Dropdown dropDown;
     [SerializeField] private TextMeshProUGUI description;
 
 
     string txt;
-    int dropDownValue;
     List<string> keycapNames = new List<string>();
 
     void Start()
     {
-        UIController = GetComponent<KeycapsUIController>();
-        description = GetComponentInChildren<TextMeshProUGUI>();
-        dropDown = GetComponentInChildren<Dropdown>();
+        EventManager.current.onModelSelect += PopulateDropdown;
+        //PopulateDropdown(); //subscribe to event
+        dropDown.onValueChanged.AddListener((dropDownValue) => UpdateSelection(dropDownValue));
 
-        PopulateDropdown();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        UpdateSelection();
-        
     }
 
    
-    void UpdateSelection()
+
+   
+     void UpdateSelection(int i)
     {
-        dropDownValue = dropDown.value;
-        txt = dropDown.options[dropDownValue].text;
+        
+        txt = dropDown.options[i].text;
 
         foreach (Keycaps keycaps in KeyboardManager.Instance.GetKeycaps())
         {
@@ -57,6 +50,8 @@ public class KeycapsUI : MonoBehaviour
 
     void PopulateDropdown()
     {
+        keycapNames.Clear();
+        dropDown.ClearOptions();
         foreach (Keycaps keycaps in KeyboardManager.Instance.GetKeycaps())
         {
             keycapNames.Add(keycaps.name);

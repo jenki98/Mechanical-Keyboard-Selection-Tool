@@ -14,7 +14,7 @@ public class PriceUpdateUI : MonoBehaviour
     void Start()
     {
         priceTxt = GetComponent<TextMeshProUGUI>();
-        EventManager.current.onSelectionUpdate += GetUpdatedPrice;
+        EventManager.current.onPriceUpdate += GetUpdatedPrice;
     }
 
     

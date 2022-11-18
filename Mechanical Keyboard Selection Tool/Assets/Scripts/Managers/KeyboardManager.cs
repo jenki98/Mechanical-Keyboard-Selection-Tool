@@ -5,10 +5,15 @@ using UnityEngine;
 public class KeyboardManager : MonoBehaviour
 {
     public static KeyboardManager Instance { get; set; }
-    private KeyboardSelection keyboardSelection;
+    //[SerializeField] private KeyboardSelection[] keyboardSelections;
+     //private int currentSelection;
+    private KeyboardSelection currentKeyboardSelection;
+     private int currentModel;
+    [SerializeField] private List<Keyboard> keyboards; //LIST
     [SerializeField] private Keyboard keyboard;
 
-    private void Awake()
+ 
+    void Awake()
     {
        if(Instance != null && Instance != this)
         {
@@ -18,57 +23,76 @@ public class KeyboardManager : MonoBehaviour
         {
             Instance = this;
         }
-        PrintList();
+       // EventManager.current.onModelSelect += LoadKeyboardModel;
+     
     }
 
-    public void PrintList()
+ 
+    public void LoadKeyboardModel(int i)
     {
-        foreach(Keycaps keycap in keyboard.keycaps)
-        {
-            Debug.Log(keycap.name);
-        }
+        currentModel = i;
+        GameObject keyboardModel = Instantiate(Resources.Load(keyboards[currentModel].modelName, typeof(GameObject))) as GameObject;
+        GameObject lastModel = keyboardModel;
+        DestroyModel(lastModel);
     }
+
+    private void DestroyModel(GameObject model)
+    {
+        Destroy(model);
+    }
+   
+
+    public List<Keyboard> GetKeyboards()
+    {
+        return keyboards;
+    }
+
+    public int GetCurrentModelSelection()
+    {
+        return currentModel;
+    }
+        
     public List<Keycaps> GetKeycaps()
     {
-        return keyboard.keycaps;
+        return keyboards[currentModel].keycaps;
     }
 
     public List<Switches> GetSwitches()
     {
-        return keyboard.switches;
+        return keyboards[currentModel].switches;
     }
 
     public List<ModelColour> GetModelColours()
     {
-        return keyboard.colours;
+        return keyboards[currentModel].colours;
     }
 
     public float GetBasePrice()
     {
-        keyboardSelection.basePrice = keyboard.basePrice;
-        return keyboard.basePrice;
+        currentKeyboardSelection.basePrice = keyboards[currentModel].basePrice;
+        return keyboards[currentModel].basePrice;
     }
 
     public void SelectedKeycap(Keycaps keycap)
     {
-        keyboardSelection.Keycaps = keycap;
+        currentKeyboardSelection.Keycaps = keycap;
         Debug.Log(keycap.price);
     }
 
     public void SelectedSwitch(Switches switches)
     {
-        keyboardSelection.Switches = switches;
+        currentKeyboardSelection.Switches = switches;
     }
 
     public void SelectedColour(ModelColour modelColour)
     {
-        keyboardSelection.ModelColour = modelColour;
+        currentKeyboardSelection.ModelColour = modelColour;
     }
 
     public KeyboardSelection GetKeyboardSelection()
     {
         GetBasePrice();
-        return keyboardSelection;
+        return currentKeyboardSelection;
     }
 
 

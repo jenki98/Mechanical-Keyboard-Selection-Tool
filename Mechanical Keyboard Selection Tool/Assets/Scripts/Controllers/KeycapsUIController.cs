@@ -17,7 +17,7 @@ public class KeycapsUIController : MonoBehaviour
     {
 
         KeyboardManager.Instance.SelectedKeycap(keycap);
-        EventManager.current.SelectionUpdate();
+        EventManager.current.PriceUpdate();
 
     }
 }

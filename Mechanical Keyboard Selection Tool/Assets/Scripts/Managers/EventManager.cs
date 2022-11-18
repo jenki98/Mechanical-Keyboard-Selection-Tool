@@ -7,20 +7,25 @@ using UnityEngine.EventSystems;
 public class EventManager : MonoBehaviour
 {
     public static EventManager current;
-
+    public event Action onPriceUpdate;
+    public event Action onModelSelect;
     private void Awake()
     {
         current = this;
     }
 
-    public event Action onSelectionUpdate;
-    public void SelectionUpdate()
+
+    public void PriceUpdate()
     {
-        if(onSelectionUpdate != null)
-        {
-            onSelectionUpdate();
-             
-        }
+        onPriceUpdate?.Invoke();
+
+
+    }
+
+
+    public void ModelSelect()
+    {
+        onModelSelect?.Invoke();
     }
 
 
