@@ -28,7 +28,7 @@ public class ModelUI : MonoBehaviour
             {
 
 
-                KeyboardManager.Instance.LoadKeyboardModel(i);
+                EventManager.current.ModelUpdate(i);
                 Debug.Log(i);
 
             }

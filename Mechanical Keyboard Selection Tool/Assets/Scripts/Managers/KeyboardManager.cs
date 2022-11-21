@@ -11,8 +11,10 @@ public class KeyboardManager : MonoBehaviour
      private int currentModel;
     [SerializeField] private List<Keyboard> keyboards; //LIST
     [SerializeField] private Keyboard keyboard;
+    GameObject lastModel;
 
- 
+
+
     void Awake()
     {
        if(Instance != null && Instance != this)
@@ -28,18 +30,23 @@ public class KeyboardManager : MonoBehaviour
     }
 
  
-    public void LoadKeyboardModel(int i)
-    {
-        currentModel = i;
-        GameObject keyboardModel = Instantiate(Resources.Load(keyboards[currentModel].modelName, typeof(GameObject))) as GameObject;
-        GameObject lastModel = keyboardModel;
-        DestroyModel(lastModel);
-    }
+    //public void LoadKeyboardModel(int i)
+    //{
+    //    DestroyModel(lastModel);
+    //    currentModel = i;
+    //    GameObject keyboardModel = Instantiate(Resources.Load(keyboards[currentModel].modelName, typeof(GameObject))) as GameObject;
+    //    lastModel = keyboardModel;
+        
+    //}
 
-    private void DestroyModel(GameObject model)
-    {
-        Destroy(model);
-    }
+    //private void DestroyModel(GameObject model)
+    //{
+    //    if (lastModel != null)
+    //    {
+    //        Destroy(model);
+    //    }
+        
+    //}
    
 
     public List<Keyboard> GetKeyboards()

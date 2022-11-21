@@ -14,9 +14,9 @@ public class ModelColourUI : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
-        //EventManager.current.onModelSelect += AddColours;
+        EventManager.current.onModelSelect += AddColours;
 
-        AddColours(); // observer
+       // AddColours(); // observer
     }
    
 
@@ -55,7 +55,6 @@ public class ModelColourUI : MonoBehaviour
                 UIController.ChangeModelColour(modelColour);
                 UIController.UpdateModelColourSelection(modelColour);
             }
-
         }
 
     }
