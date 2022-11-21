@@ -7,13 +7,15 @@ using UnityEngine.EventSystems;
 public class EventManager : MonoBehaviour
 {
     public static EventManager current;
+
     public event Action onPriceUpdate;
     public event Action onModelSelect;
+    public event Action<int> onModelUpdate;
+    public event Action<string> onCameraViewUpdate;
     private void Awake()
     {
         current = this;
     }
-
 
     public void PriceUpdate()
     {
@@ -22,11 +24,18 @@ public class EventManager : MonoBehaviour
 
     }
 
-
     public void ModelSelect()
     {
         onModelSelect?.Invoke();
     }
 
+    public void ModelUpdate(int i)
+    {
+        onModelUpdate?.Invoke(i);
+    }
 
+    public void CameraUpdate(string s)
+    {
+        onCameraViewUpdate?.Invoke(s);
+    }
 }
