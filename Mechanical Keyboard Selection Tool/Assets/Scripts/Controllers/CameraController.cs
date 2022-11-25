@@ -5,24 +5,18 @@ using UnityEngine.EventSystems;
 
 public class CameraController : MonoBehaviour
 {
-   [SerializeField] private GameObject freeCam;
-    private Vector3 startMarker;
-    private Vector3 endMarker;
+    [SerializeField] private GameObject freeCam;
+    [SerializeField] private Transform keyboard;
     private string cameraView;
 
-    // Movement speed in units per second.
-    public float speed = 1.0F;
 
-    // Time when the movement started.
-    private float startTime;
+    private Vector3 startPos;
+    private Vector3 endPos;
 
-    // Total distance between the markers.
-    private float journeyLength;
-    private float distCovered;
     private void Start()
     {
-      //  startTime = Time.time;
         EventManager.current.onCameraViewUpdate += UpdateCameraView;
+        cameraView = "FreeView";
         
     }
     void Update()
@@ -39,11 +33,9 @@ public class CameraController : MonoBehaviour
                 {
                     freeCam.SetActive(true);
                 }
-                
+
             }
         }
-
-      //  distCovered = (Time.time - startTime) * speed;
 
     }
 
@@ -66,27 +58,44 @@ public class CameraController : MonoBehaviour
 
     void Freeview()
     {
+    
         freeCam.SetActive(true);
-
+        
     }
 
     void TopView()
     {
-        //startMarker = this.transform.position;
-        //endMarker = new Vector3();
-        //journeyLength = Vector3.Distance(startMarker, endMarker);
-        //float fractionOfJourney = distCovered / journeyLength;
-        //transform.position = Vector3.Lerp(startMarker, endMarker, fractionOfJourney);
+       
         freeCam.SetActive(false);
-        this.transform.position = new Vector3(-0.994f, 2.5f, 0.817f);
-        this.transform.eulerAngles = new Vector3(90f, 0f, 0f);
+        startPos = this.transform.position;
+        endPos = new Vector3(-1.33f, 2.781f, 0.743f);
+        StartCoroutine(MoveCam());
+
 
     }
 
     void SideView()
     {
         freeCam.SetActive(false);
-        this.transform.position = new Vector3(-2.3f, 0.162f, 0.83f);
-        this.transform.eulerAngles = new Vector3(0f, 90f, 0f);
+        startPos = this.transform.position;
+        endPos = new Vector3(-2.5f, 0.162f, 0.83f);
+        StartCoroutine(MoveCam());
+
+    }
+
+    IEnumerator MoveCam()
+    {
+      
+        float timeElapsed = 0f;
+        float totalLerpTime = 1f;
+
+        while(timeElapsed < totalLerpTime)
+        {
+            this.transform.position = Vector3.Lerp(startPos, endPos, (timeElapsed / totalLerpTime));
+            this.transform.LookAt(keyboard);
+            timeElapsed += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+
     }
 }
