@@ -24,8 +24,6 @@ public class KeycapsUI : MonoBehaviour
     }
 
    
-
-   
      void UpdateSelection(int i)
     {
         

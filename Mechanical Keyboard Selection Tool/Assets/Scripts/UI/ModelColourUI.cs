@@ -9,6 +9,7 @@ public class ModelColourUI : MonoBehaviour
 
     [SerializeField] private GameObject templatePrefab;
     [SerializeField] private Transform templateParent;
+    
 
     
     // Update is called once per frame
@@ -19,9 +20,18 @@ public class ModelColourUI : MonoBehaviour
        // AddColours(); // observer
     }
    
-
     void AddColours()
     {
+        List<GameObject> colourObj = new List<GameObject>();
+        
+        foreach(Transform child in templateParent.transform)
+        {
+            Destroy(child.gameObject);
+            //colourObj.Add(child.gameObject);
+        }
+
+        
+       
         foreach (ModelColour modelColour in KeyboardManager.Instance.GetModelColours())
         {
             

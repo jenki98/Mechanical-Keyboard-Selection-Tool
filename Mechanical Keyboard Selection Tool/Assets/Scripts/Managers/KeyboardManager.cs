@@ -8,10 +8,9 @@ public class KeyboardManager : MonoBehaviour
     //[SerializeField] private KeyboardSelection[] keyboardSelections;
      //private int currentSelection;
     private KeyboardSelection currentKeyboardSelection;
-     private int currentModel;
+    private int currentModel;
     [SerializeField] private List<Keyboard> keyboards; //LIST
     [SerializeField] private Keyboard keyboard;
-    GameObject lastModel;
 
 
 
@@ -23,31 +22,17 @@ public class KeyboardManager : MonoBehaviour
         }
         else
         {
+            DontDestroyOnLoad(this.gameObject);
             Instance = this;
         }
-       // EventManager.current.onModelSelect += LoadKeyboardModel;
      
     }
 
- 
-    //public void LoadKeyboardModel(int i)
-    //{
-    //    DestroyModel(lastModel);
-    //    currentModel = i;
-    //    GameObject keyboardModel = Instantiate(Resources.Load(keyboards[currentModel].modelName, typeof(GameObject))) as GameObject;
-    //    lastModel = keyboardModel;
-        
-    //}
-
-    //private void DestroyModel(GameObject model)
-    //{
-    //    if (lastModel != null)
-    //    {
-    //        Destroy(model);
-    //    }
-        
-    //}
-   
+    public void SetCurrentModel(int i)
+    {
+        currentModel = i;
+    } 
+  
 
     public List<Keyboard> GetKeyboards()
     {

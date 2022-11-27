@@ -16,6 +16,9 @@ public class ModelUIController : MonoBehaviour
 
     public void LoadKeyboardModel(int i)
     {
+       
+        KeyboardManager.Instance.SetCurrentModel(i);
+        EventManager.current.ModelSelect();
         DestroyModel(lastModel);
         GameObject keyboardModel = Instantiate(Resources.Load(KeyboardManager.Instance.GetKeyboards()[i].modelName, typeof(GameObject))) as GameObject;
         lastModel = keyboardModel;

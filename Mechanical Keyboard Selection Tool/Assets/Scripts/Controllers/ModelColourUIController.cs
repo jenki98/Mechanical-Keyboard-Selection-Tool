@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ModelColourUIController : MonoBehaviour
 {
-    private KeyboardSelection keyboardStruct = new KeyboardSelection();
     [SerializeField] private Material boardMaterial;
     //change keycap colour
     //update keyboard selection

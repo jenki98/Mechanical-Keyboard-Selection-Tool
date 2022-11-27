@@ -19,17 +19,13 @@ public class ModelUI : MonoBehaviour
     void UpdateSelection(int i)
     {
 
-        EventManager.current.ModelSelect();
         string txt = dropDown.options[i].text;
 
         foreach (Keyboard keyboard in KeyboardManager.Instance.GetKeyboards())
         {
             if (txt.Equals(keyboard.modelName))
             {
-
-
                 EventManager.current.ModelUpdate(i);
-                Debug.Log(i);
 
             }
         }
