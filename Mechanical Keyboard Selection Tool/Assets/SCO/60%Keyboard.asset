@@ -17,10 +17,10 @@ MonoBehaviour:
   - colourName: Black
     colour: {r: 0, g: 0, b: 0, a: 1}
     price: 0
-  - colourName: Grey
-    colour: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+  - colourName: E-Pink
+    colour: {r: 1, g: 0.8066038, b: 0.9466608, a: 1}
     price: 10
-  - colourName: White
+  - colourName: E-White
     colour: {r: 1, g: 1, b: 1, a: 1}
     price: 30
   - colourName: Burgundy
@@ -28,25 +28,27 @@ MonoBehaviour:
     price: 20
   switches:
   - name: Holy Pandas
-    description: Tactile switches
+    description: Tactile switches, Poly Carbonate top housing, Nylon Bottom housing,
+      67g Spring
     price: 20
   - name: Alpacas
-    description: 62g
+    description: 'Linear switches, Poly Carbonate top housing, Nylon Bottom housing,
+      62g Spring '
     price: 40
   - name: Lavenders
-    description: 63g
+    description: Linear switches, Nylon top and bottom housing, 65g spring
     price: 30
   keycaps:
   - name: WoB
     description: Black text on White keycaps
     color: {r: 1, g: 1, b: 1, a: 0}
     price: 0
-  - name: Light blue
-    description: Light blue keycaps with black text
-    color: {r: 0.6399964, g: 0.87363994, b: 0.8867924, a: 0}
+  - name: Grey
+    description: Grey keycaps with black text
+    color: {r: 0.3207547, g: 0.29200783, b: 0.30900866, a: 0}
     price: 40
-  - name: Lavender
-    description: 'Lavender keycaps with '
-    color: {r: 0.75982153, g: 0.53844786, b: 0.9433962, a: 0}
+  - name: Black
+    description: 'Black Keycaps with white text '
+    color: {r: 0, g: 0, b: 0, a: 0}
     price: 60
   basePrice: 100

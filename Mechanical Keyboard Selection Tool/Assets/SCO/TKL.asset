@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d97d74de92c3d414f898880e4dbc499f, type: 3}
+  m_Name: TKL
+  m_EditorClassIdentifier: 
+  modelName: TKL
+  colours:
+  - colourName: Black
+    colour: {r: 0, g: 0, b: 0, a: 1}
+    price: 0
+  - colourName: Grey
+    colour: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+    price: 10
+  - colourName: White
+    colour: {r: 1, g: 1, b: 1, a: 1}
+    price: 30
+  - colourName: Purple
+    colour: {r: 0.24520934, g: 0.111739054, b: 0.254717, a: 1}
+    price: 20
+  switches:
+  - name: Boba U4T
+    description: Tactile switches, Custom Plastic mix Housing, 62g/68g spring
+    price: 50
+  - name: Gateron Ink Black V2
+    description: Linear Switch, POM stem, 60g sping
+    price: 70
+  - name: Banana Split
+    description: Linear, Polycarbonate/Nylon mix Housing, 62g spring
+    price: 60
+  keycaps:
+  - name: WoB
+    description: Black text on White keycaps
+    color: {r: 1, g: 1, b: 1, a: 0}
+    price: 0
+  - name: Light Blue
+    description: Pink keycaps with black text
+    color: {r: 0.5330188, g: 1, b: 0.977383, a: 0}
+    price: 40
+  - name: Lavender
+    description: 'Lavender keycaps with '
+    color: {r: 0.75982153, g: 0.53844786, b: 0.9433962, a: 0}
+    price: 60
+  basePrice: 100

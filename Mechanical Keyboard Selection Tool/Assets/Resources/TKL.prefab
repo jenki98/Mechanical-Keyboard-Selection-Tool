@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3292494131561651707}
   - component: {fileID: 4063207220352466480}
   - component: {fileID: 5171207234687626069}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Keycap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3977602864762067230}
   - component: {fileID: 8442679764803698646}
   - component: {fileID: 3011992417724482793}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BackPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6935206172212535760}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TKL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7743128018354404202}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -1.002, y: 0.1306, z: 0.945}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.9290746, y: 1.9290746, z: 1.9290746}
   m_ConstrainProportionsScale: 0
   m_Children:
