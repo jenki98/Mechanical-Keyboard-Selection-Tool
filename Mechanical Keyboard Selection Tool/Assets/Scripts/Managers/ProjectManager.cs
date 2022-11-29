@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjectManager : MonoBehaviour
 {
     public static ProjectManager Instance { get; set; }
-
+    private currentConfig current;
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -20,10 +20,9 @@ public class ProjectManager : MonoBehaviour
 
     }
 
-
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        EventManager.current.Initialise(current);
     }
 }
+    

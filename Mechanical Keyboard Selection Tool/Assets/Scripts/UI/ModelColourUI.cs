@@ -16,22 +16,28 @@ public class ModelColourUI : MonoBehaviour
     private void Start()
     {
         EventManager.current.onModelSelect += AddColours;
+        EventManager.current.onInitialise += Initialise;
 
-       // AddColours(); // observer
     }
-   
-    void AddColours()
+
+    private void OnEnable()
     {
-        List<GameObject> colourObj = new List<GameObject>();
+      
+
+    }
+
+    void Initialise(currentConfig current)
+    {
+        AddColours(current.colourSelection);
+    }
+    void AddColours(int i = 0)
+    {
+        //List<GameObject> colourObj = new List<GameObject>();
         
         foreach(Transform child in templateParent.transform)
         {
             Destroy(child.gameObject);
-            //colourObj.Add(child.gameObject);
         }
-
-        
-       
         foreach (ModelColour modelColour in KeyboardManager.Instance.GetModelColours())
         {
             
@@ -42,6 +48,7 @@ public class ModelColourUI : MonoBehaviour
             ChangeButtonColour(btn, modelColour);
            
         }
+        GetComponentsInChildren<Button>()[0].onClick.Invoke();
     }
 
 
@@ -68,7 +75,6 @@ public class ModelColourUI : MonoBehaviour
         }
 
     }
-
-
+  
 
 }

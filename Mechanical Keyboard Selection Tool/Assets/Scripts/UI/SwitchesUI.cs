@@ -18,12 +18,19 @@ public class SwitchesUI : MonoBehaviour
     void Start()
     {
         EventManager.current.onModelSelect += PopulateDropdown;
+        
         dropDown.onValueChanged.AddListener((dropDownValue) => UpdateSelection(dropDownValue));
-
-
-
     }
 
+    private void OnEnable()
+    {
+        EventManager.current.onInitialise += Initialise;
+    }
+    void Initialise(currentConfig current)
+    {
+        PopulateDropdown(current.switchSelection);
+        
+    }
     void UpdateSelection(int i)
     {
 
@@ -40,7 +47,7 @@ public class SwitchesUI : MonoBehaviour
         }
     }
 
-    void PopulateDropdown()
+    void PopulateDropdown(int index = 0)
     {
         switchNames.Clear();
         dropDown.ClearOptions();
@@ -49,5 +56,21 @@ public class SwitchesUI : MonoBehaviour
             switchNames.Add(switches.name);
         }
         dropDown.AddOptions(switchNames);
+        Debug.Log(index);
+        dropDown.value = 0;
+        UpdateSelection(0);
     }
+
+    
+
+}
+
+public struct currentConfig{
+    public int switchSelection;
+    public int keycapSelection;
+    public int colourSelection;
+    public int modelSelection;
+    public int cameraSelection;
+    public int backgroundSelection;
+
 }

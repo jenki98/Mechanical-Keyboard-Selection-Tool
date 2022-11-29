@@ -13,6 +13,7 @@ public class CameraController : MonoBehaviour
     private Vector3 startPos;
     private Vector3 endPos;
 
+    private Vector3 endRotation;
     private void Start()
     {
         EventManager.current.onCameraViewUpdate += UpdateCameraView;
@@ -69,6 +70,7 @@ public class CameraController : MonoBehaviour
         freeCam.SetActive(false);
         startPos = this.transform.position;
         endPos = new Vector3(-1.33f, 2.781f, 0.743f);
+        endRotation = new Vector3(90f, 0f, 0f);
         StartCoroutine(MoveCam());
 
 
@@ -79,6 +81,7 @@ public class CameraController : MonoBehaviour
         freeCam.SetActive(false);
         startPos = this.transform.position;
         endPos = new Vector3(-2.5f, 0.162f, 0.83f);
+        endRotation = new Vector3(0f, 90f, 0f);
         StartCoroutine(MoveCam());
 
     }
@@ -88,13 +91,16 @@ public class CameraController : MonoBehaviour
       
         float timeElapsed = 0f;
         float totalLerpTime = 1f;
-
-        while(timeElapsed < totalLerpTime)
+        Vector3 startRotation = transform.rotation.eulerAngles;
+        //endRotation = new Vector3(90f, 0f, 0f);
+        while (timeElapsed < totalLerpTime)
         {
             this.transform.position = Vector3.Lerp(startPos, endPos, (timeElapsed / totalLerpTime));
-            this.transform.LookAt(keyboard);
+            Vector3 rotationLerp = Vector3.Lerp(startRotation, endRotation, (timeElapsed / totalLerpTime));
+            transform.rotation = Quaternion.Euler(rotationLerp);
+           // this.transform.LookAt(keyboard);
             timeElapsed += Time.deltaTime;
-            yield return new WaitForEndOfFrame();
+            yield return null;
         }
 
     }

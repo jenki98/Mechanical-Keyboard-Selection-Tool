@@ -9,7 +9,8 @@ public class EventManager : MonoBehaviour
     public static EventManager current;
 
     public event Action onPriceUpdate;
-    public event Action onModelSelect;
+    public event Action<int> onModelSelect;
+    public event Action<currentConfig> onInitialise;
     public event Action<int> onModelUpdate;
     public event Action<string> onCameraViewUpdate;
     public event Action<int> onBackgroundUpdate;
@@ -17,15 +18,14 @@ public class EventManager : MonoBehaviour
     {
         current = this;
     }
-
     public void PriceUpdate()
     {
         onPriceUpdate?.Invoke();
     }
 
-    public void ModelSelect()
+    public void ModelSelect(int i)
     {
-        onModelSelect?.Invoke();
+        onModelSelect?.Invoke(i);
     }
 
     public void ModelUpdate(int i)
@@ -41,5 +41,10 @@ public class EventManager : MonoBehaviour
     public void BackgroundUpdate(int i)
     {
         onBackgroundUpdate?.Invoke(i);
+    }
+
+    public void Initialise(currentConfig c)
+    {
+        onInitialise?.Invoke(c);
     }
 }

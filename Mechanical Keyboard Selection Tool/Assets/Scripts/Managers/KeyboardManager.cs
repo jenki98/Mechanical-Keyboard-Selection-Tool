@@ -68,7 +68,6 @@ public class KeyboardManager : MonoBehaviour
     public void SelectedKeycap(Keycaps keycap)
     {
         currentKeyboardSelection.Keycaps = keycap;
-        Debug.Log(keycap.price);
     }
 
     public void SelectedSwitch(Switches switches)

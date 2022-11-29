@@ -8,17 +8,24 @@ public class ModelUI : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private Dropdown dropDown;
     List<string> modelNames = new List<string>();
+    currentConfig current;
+    private ModelUIController mController;
+
     
     void Start()
     {
-        PopulateDropdown(); //subscribe to event
+        mController = GetComponent<ModelUIController>();
+        PopulateDropdown();
         dropDown.onValueChanged.AddListener((dropDownValue) => UpdateSelection(dropDownValue));
     }
+    //void Initialise(currentConfig current)
+    //{
+    //    Debug.Log("hi");
+    //    PopulateDropdown(current.modelSelection);
+    //}
 
-    // Update is called once per frame
     void UpdateSelection(int i)
     {
-
         string txt = dropDown.options[i].text;
 
         foreach (Keyboard keyboard in KeyboardManager.Instance.GetKeyboards())
@@ -35,10 +42,15 @@ public class ModelUI : MonoBehaviour
 
     void PopulateDropdown()
     {
+        Debug.Log("populate");
         foreach (Keyboard keyboard in KeyboardManager.Instance.GetKeyboards())
         {
             modelNames.Add(keyboard.modelName);
         }
         dropDown.AddOptions(modelNames);
+        dropDown.value = 0;
+        mController.LoadKeyboardModel(0);
+        //EventManager.current.ModelUpdate(0);
     }
+   
 }

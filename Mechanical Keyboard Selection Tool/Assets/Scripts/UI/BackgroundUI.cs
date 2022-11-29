@@ -9,15 +9,24 @@ public class BackgroundUI : MonoBehaviour
     [SerializeField] private Dropdown dropDown;
     void Start()
     {
+        dropDown.value = 0;
+        EventManager.current.BackgroundUpdate(0);
+
         dropDown.onValueChanged.AddListener((dropDownValue) => UpdateSelection(dropDownValue));
 
     }
 
+    void Initialise(currentConfig current)
+    {
+        Debug.Log("hi");
+        dropDown.value = 0;
+        EventManager.current.BackgroundUpdate(0);
+    }
     // Update is called once per frame
     void UpdateSelection(int i)
     {
-        string txt = dropDown.options[i].text;
         EventManager.current.BackgroundUpdate(i);
-        Debug.Log(txt);
     }
+
+    
 }
